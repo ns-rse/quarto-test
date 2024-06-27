@@ -1,0 +1,4 @@
+```{r}
+# Lets try doing something with the `eruptions`
+mean(eruptions)
+```

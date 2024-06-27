@@ -37,29 +37,7 @@ number-sections: true
 
 ## Introduction
 
-```{r}
-eruptions <- c(1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021)
-n_eruptions <- length(eruptions)
-```
-
-```{r}
-#| label: fig-timeline
-#| fig-cap: Timeline of recent earthquakes on La Palma
-#| fig-alt: An event plot of the years of the last 8 eruptions on La Palma.
-#| fig-height: 1.5
-#| fig-width: 6
-par(mar = c(3, 1, 1, 1) + 0.1)
-plot(eruptions, rep(0, n_eruptions), 
-  pch = "|", axes = FALSE)
-axis(1)
-box()
-```
-
-```{r}
-#| output: false
-avg_years_between_eruptions <- mean(diff(eruptions[-n_eruptions]))
-avg_years_between_eruptions
-```
+{{< include sections/introduction.qmd >}}
 
 Based on data up to and including 1971, eruptions on La Palma happen every `r round(avg_years_between_eruptions, 1)` years on average.
 
@@ -94,13 +72,15 @@ where $\lambda$ is the rate of eruptions per year. Using @eq-poisson, the probab
 
 ![Map of La Palma](images/la-palma-map.png){#fig-map}
 
-La Palma is one of the west most islands in the Volcanic Archipelago of the Canary Islands (@fig-map). 
+La Palma is one of the west most islands in the Volcanic Archipelago of the Canary Islands (@fig-map).
 
 {{< embed notebooks/explore-earthquakes.qmd#fig-spatial-plot >}}
 
 @fig-spatial-plot shows the location of recent Earthquakes on La Palma.
 
 ## Data & Methods {#sec-data-methods}
+
+{{< include sections/analysis.qmd >}}
 
 ## Conclusion
 
