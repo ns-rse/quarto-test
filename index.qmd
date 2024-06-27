@@ -33,11 +33,13 @@ bibliography: references.bib
 citation:
   container-title: Earth and Space Science
 number-sections: true
+notebook-preview-options:
+  preview: false
 ---
 
 ## Introduction
 
-{{< include sections/introduction.qmd >}}
+{{< include sections/_introduction.qmd >}}
 
 Based on data up to and including 1971, eruptions on La Palma happen every `r round(avg_years_between_eruptions, 1)` years on average.
 
@@ -80,7 +82,7 @@ La Palma is one of the west most islands in the Volcanic Archipelago of the Cana
 
 ## Data & Methods {#sec-data-methods}
 
-{{< include sections/analysis.qmd >}}
+{{< include sections/_analysis.qmd >}}
 
 ## Conclusion
 
